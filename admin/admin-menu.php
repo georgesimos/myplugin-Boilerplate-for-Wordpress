@@ -1,4 +1,4 @@
-<?php //myplugin - admin menu
+<?php // MyPlugin - Admin Menu
 
 // exit if file is called directly
 if ( ! defined( 'ABSPATH' ) ) {
