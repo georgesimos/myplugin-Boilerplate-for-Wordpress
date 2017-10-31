@@ -39,14 +39,14 @@ add_settings_section(
 
 add_settings_section(
 	'myplugin_section_login',
-	'Customize Login Page',
+	esc_html__( 'Customize Login Page', 'myplugin' ),
 	'myplugin_callback_section_login',
 	'myplugin'
 );
 
 add_settings_section(
 	'myplugin_section_admin',
-	'Customize Admin Area',
+	esc_html__( 'Customize Admin Area', 'myplugin' ),
 	'myplugin_callback_section_admin',
 	'myplugin'
 );
@@ -66,7 +66,7 @@ add_settings_field(
 
 add_settings_field(
 	'custom_url',
-	'Custom URL',
+	esc_html__( 'Custom URL', 'myplugin' ),
 	'myplugin_callback_field_text',
 	'myplugin',
 	'myplugin_section_login',
@@ -75,7 +75,7 @@ add_settings_field(
 
 add_settings_field(
 	'custom_title',
-	'Custom Title',
+	esc_html__( 'Custom Title', 'myplugin' ),
 	'myplugin_callback_field_text',
 	'myplugin',
 	'myplugin_section_login',
@@ -84,7 +84,7 @@ add_settings_field(
 
 add_settings_field(
 	'custom_style',
-	'Custom Style',
+	esc_html__( 'Custom Style', 'myplugin' ),
 	'myplugin_callback_field_radio',
 	'myplugin',
 	'myplugin_section_login',
@@ -93,7 +93,7 @@ add_settings_field(
 
 add_settings_field(
 	'custom_message',
-	'Custom Message',
+	esc_html__( 'Custom Message', 'myplugin' ),
 	'myplugin_callback_field_textarea',
 	'myplugin',
 	'myplugin_section_login',
@@ -102,7 +102,7 @@ add_settings_field(
 
 add_settings_field(
 	'custom_footer',
-	'Custom Footer',
+	esc_html__( 'Custom Footer', 'myplugin' ),
 	'myplugin_callback_field_text',
 	'myplugin',
 	'myplugin_section_admin',
@@ -111,7 +111,7 @@ add_settings_field(
 
 add_settings_field(
 	'custom_toolbar',
-	'Custom Toolbar',
+	esc_html__( 'Custom Toolbar', 'myplugin' ),
 	'myplugin_callback_field_checkbox',
 	'myplugin',
 	'myplugin_section_admin',
@@ -120,7 +120,7 @@ add_settings_field(
 
 add_settings_field(
 	'custom_scheme',
-	'Custom Scheme',
+	esc_html__( 'Custom Scheme', 'myplugin' ),
 	'myplugin_callback_field_select',
 	'myplugin',
 	'myplugin_section_admin',

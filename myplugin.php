@@ -41,6 +41,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
+// load text domain
+function myplugin_load_textdomain() {
+
+	load_plugin_textdomain( 'myplugin', false, plugin_dir_path( __FILE__ ) . 'languages/' );
+
+}
+add_action( 'plugins_loaded', 'myplugin_load_textdomain' );
+
+
 // if admin area
 if ( is_admin() ) {
 	// Include Dependencies
@@ -50,16 +59,18 @@ if ( is_admin() ) {
 	require_once plugin_dir_path( __FILE__ ) . 'admin/settings-callbacks.php';
 	require_once plugin_dir_path( __FILE__ ) . 'admin/settings-validate.php';
 }
+	// Include Dependencies : Admin and Public
+	require_once plugin_dir_path( __FILE__ ) . 'includes/core-functions.php';
 
 // default plugin options
 function myplugin_options_default() {
 
 	return array(
 		'custom_url'     => 'https://wordpress.org/',
-		'custom_title'   => 'Powered by WordPress',
-		'custom_style'   => 'disable',
-		'custom_message' => '<p class="custom-message">My custom message</p>',
-		'custom_footer'  => 'Special message for users',
+		'custom_title'   => esc_html__( 'Powered by WordPress', 'myplugin' ),
+		'custom_style'   => esc_html__( 'disable', 'myplugin' ),
+		'custom_message' => '<p class="custom-message">' . esc_html__( 'My custom message', 'myplugin' ) . '</p>',
+		'custom_footer'  => esc_html__( 'Special message for users', 'myplugin' ),
 		'custom_toolbar' => false,
 		'custom_scheme'  => 'default',
 	);
