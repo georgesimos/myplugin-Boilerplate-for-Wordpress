@@ -39,3 +39,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 
 }
+
+
+// if admin area
+if ( is_admin() ) {
+	// Include Dependencies
+	require_once plugin_dir_path( __FILE__ ) . 'admin/admin-menu.php';
+	require_once plugin_dir_path( __FILE__ ) . 'admin/setting-page.php';
+}
